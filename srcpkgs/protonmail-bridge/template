@@ -1,0 +1,26 @@
+# Template file for 'protonmail-bridge'
+pkgname=protonmail-bridge
+version=1.0.2
+revision=1
+only_for_archs="x86_64"
+depends="qt5 qt5-declarative qt5-svg libpulseaudio libsecret gtk+3" 
+short_desc="Application to use IMAP/SMTP with your paid ProtonMail account"
+maintainer=""
+license="custom MIT"
+homepage="https://protonmail.com/bridge/"
+distfiles="https://protonmail.com/download/protonmail-bridge_${version}-${revision}_amd64.deb"
+checksum=fd29a9bc408157e59519b3055c66f936a83406debe177986beeccbd95e9022b2
+noshlibprovides=yes
+nostrip=yes
+noverifyrdeps=yes
+
+do_extract() {
+	ar x ${XBPS_SRCDISTDIR}/protonmail-bridge-${version}/protonmail-bridge_${version}-${revision}_amd64.deb
+	tar xfJ data.tar.xz
+	tar xf control.tar.gz
+}
+
+do_install() {
+	vlicense copyright
+	vcopy usr/ /
+}
