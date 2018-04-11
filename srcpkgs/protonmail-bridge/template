@@ -1,6 +1,6 @@
 # Template file for 'protonmail-bridge'
 pkgname=protonmail-bridge
-version=1.0.2
+version=1.0.3
 revision=1
 only_for_archs="x86_64"
 depends="qt5 qt5-declarative qt5-svg libpulseaudio libsecret gtk+3" 
@@ -9,7 +9,7 @@ maintainer=""
 license="custom MIT"
 homepage="https://protonmail.com/bridge/"
 distfiles="https://protonmail.com/download/protonmail-bridge_${version}-${revision}_amd64.deb"
-checksum=fd29a9bc408157e59519b3055c66f936a83406debe177986beeccbd95e9022b2
+checksum=047126b35710d555cc6bdcfee7889fc4a17cfe8dd01ce7dbed786a503ad34438
 noshlibprovides=yes
 nostrip=yes
 noverifyrdeps=yes
